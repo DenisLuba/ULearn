@@ -19,9 +19,17 @@ internal class Program
         copyArray = (int[]) array.Clone();
         Console.WriteLine("Merge Sort");
 
-        foreach (var i in MergeSort.Sort(array))
+        foreach (var i in MergeSort.Sort(copyArray))
             Console.WriteLine(i);
-        
+
+        copyArray = (int[])array.Clone();
+        Console.WriteLine("Quick Sort");
+
+        foreach (var i in QuickSort.Sort(copyArray))
+        {
+            Console.WriteLine(i);
+        }
+
     }
 
     private static int[] GenerateArray(int length)
