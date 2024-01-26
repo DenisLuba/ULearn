@@ -39,7 +39,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bubble&Merge&QuickSort", "B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinarySearchLeft", "BinarySearchLeft\BinarySearchLeft.csproj", "{457C9D7E-BB47-490E-8713-A4F13641572B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearchRight", "BinarySearchRight\BinarySearchRight.csproj", "{FECC745F-049F-4E7F-AE82-AD773D5889D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinarySearchRight", "BinarySearchRight\BinarySearchRight.csproj", "{FECC745F-049F-4E7F-AE82-AD773D5889D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryList", "DirectoryList\DirectoryList.csproj", "{38DB394F-A1E1-418E-B515-5F3517A58B0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +125,10 @@ Global
 		{FECC745F-049F-4E7F-AE82-AD773D5889D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FECC745F-049F-4E7F-AE82-AD773D5889D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FECC745F-049F-4E7F-AE82-AD773D5889D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38DB394F-A1E1-418E-B515-5F3517A58B0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38DB394F-A1E1-418E-B515-5F3517A58B0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38DB394F-A1E1-418E-B515-5F3517A58B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38DB394F-A1E1-418E-B515-5F3517A58B0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
