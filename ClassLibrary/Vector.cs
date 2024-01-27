@@ -4,6 +4,8 @@ public class Vector
 {
     public double X, Y;
 
+
+
     public double GetLength() => Geometry.GetLength(this);
 
     public Vector Add(Vector vector) => Geometry.Add(this, vector);
