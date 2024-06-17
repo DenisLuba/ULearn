@@ -73,7 +73,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstOrDefaultMethod", "Fir
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TakeMethod", "TakeMethod\TakeMethod.csproj", "{658C7DF0-6F0A-421D-960E-FAEAAC1A2EAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortedWords", "SortedWords\SortedWords.csproj", "{3E96F496-838F-44C2-A7B8-3C978C49862D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortedWords", "SortedWords\SortedWords.csproj", "{3E96F496-838F-44C2-A7B8-3C978C49862D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrequencyDictionary", "FrequencyDictionary\FrequencyDictionary.csproj", "{AADF3893-1552-4B62-A93A-4B77E2710A3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -225,6 +227,10 @@ Global
 		{3E96F496-838F-44C2-A7B8-3C978C49862D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E96F496-838F-44C2-A7B8-3C978C49862D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E96F496-838F-44C2-A7B8-3C978C49862D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AADF3893-1552-4B62-A93A-4B77E2710A3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AADF3893-1552-4B62-A93A-4B77E2710A3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AADF3893-1552-4B62-A93A-4B77E2710A3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AADF3893-1552-4B62-A93A-4B77E2710A3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
