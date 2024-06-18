@@ -18,11 +18,8 @@ public class MyForm : Form
         Controls.Add(textBox);
         Controls.Add(button);
 
-        button.Click += (sender, args) =>
-        {
-            string text = new Regex(@"\D").Replace(textBox.Text, "");
-            textBox.Text = (int.Parse(text == "" ? "0" : text) + 1).ToString();
-        };
+        button.Click += MyOnClick;
+        // button.Click += (sender, args) => { ... };
 
         // Фиксирует размер окна
         //FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -31,12 +28,11 @@ public class MyForm : Form
         //MaximizeBox = false;
 
         // Вызывается в тот момент, когда происходит изменение окна, но не в момент загрузки окна
-        //SizeChanged += (sender, args) => { };
+        //SizeChanged += (sender, args) => { ... };
+        SizeChanged += new EventHandler(MyOnSizeChanged);
 
         // Вызывается в момент загрузки окна
         Load += (sender, args) => OnSizeChanged(EventArgs.Empty); // вызывает SizeChanged без событий
-
-        SizeChanged += new EventHandler(MyOnSizeChanged);
     }
 
     private void MyOnSizeChanged(object? sender, EventArgs args)
@@ -49,6 +45,12 @@ public class MyForm : Form
         label.Location = new Point(0, y);
         textBox.Location = new Point(0, label.Bottom);
         button.Location = new Point(0, textBox.Bottom);
+    }
+
+    void MyOnClick(object? sender, EventArgs args)
+    {
+        string text = new Regex(@"\D").Replace(textBox.Text, "");
+        textBox.Text = (int.Parse(text == "" ? "0" : text) + 1).ToString();
     }
 
     public static void Main()
