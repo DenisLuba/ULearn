@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace MyFormsGraphics
@@ -18,6 +13,21 @@ namespace MyFormsGraphics
         protected override void OnPaint(PaintEventArgs e)
         {
             var graphics = e.Graphics;
+
+            // Изменяет начало системы координат, добавляя указанное преобразование
+            // к матрицу преобразования этого System.Drawing.Graphics.
+            // (т.е. начало координат переносим, в данном случае, в центр холста)
+            graphics.TranslateTransform(ClientSize.Width / 2, ClientSize.Height / 2);
+            // Применяет указанное вращение к матрице преобразования этого System.Drawing.Graphics.
+            // (т.е. поворачиваем холст, в данном случае, на 10 градусов)
+            graphics.RotateTransform(10);
+            // Применяет указанную операцию масштабирования к матрице преобразования этого
+            // System.Drawing.Graphics, добавляя его к матрице преобразования объекта.
+            // (т.е. уменьшаем масштаб холста до 70%, в данном случае)
+            graphics.ScaleTransform(0.7f, 0.7f);
+            // возвращаем начало координат на свое место в точку (0, 0)
+            graphics.TranslateTransform(-ClientSize.Width / 2, -ClientSize.Height / 2);
+
 
             graphics.DrawLine(new Pen(Color.Red, 5), new Point(0, 0), new Point(50, 100));
 
