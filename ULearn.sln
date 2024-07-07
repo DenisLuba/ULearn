@@ -87,7 +87,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFormsGraphics", "MyFormsG
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFormsTimer", "MyFormsTimer\MyFormsTimer.csproj", "{E6E9559D-F287-4DF0-A11C-F755DE17D76C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFormsTableGame", "MyFormsTableGame\MyFormsTableGame.csproj", "{DC992B1F-AC29-4A1A-B0CF-3C5604860ABC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFormsTableGame", "MyFormsTableGame\MyFormsTableGame.csproj", "{DC992B1F-AC29-4A1A-B0CF-3C5604860ABC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labyrinth", "Labyrinth\Labyrinth.csproj", "{5037D388-1A48-4DC6-9166-EC68E763879E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -267,6 +269,10 @@ Global
 		{DC992B1F-AC29-4A1A-B0CF-3C5604860ABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC992B1F-AC29-4A1A-B0CF-3C5604860ABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC992B1F-AC29-4A1A-B0CF-3C5604860ABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5037D388-1A48-4DC6-9166-EC68E763879E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5037D388-1A48-4DC6-9166-EC68E763879E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5037D388-1A48-4DC6-9166-EC68E763879E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5037D388-1A48-4DC6-9166-EC68E763879E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

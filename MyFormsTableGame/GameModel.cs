@@ -6,6 +6,8 @@ internal class GameModel(int size)
 
     public int Size { get => size; }
 
+    public bool this[int row, int column] => Game[row, column]; // индексатор
+
     public void Start()
     {
         for (int row = 0; row < Size; row++)
