@@ -89,7 +89,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFormsTimer", "MyFormsTime
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFormsTableGame", "MyFormsTableGame\MyFormsTableGame.csproj", "{DC992B1F-AC29-4A1A-B0CF-3C5604860ABC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labyrinth", "Labyrinth\Labyrinth.csproj", "{5037D388-1A48-4DC6-9166-EC68E763879E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Labyrinth", "Labyrinth\Labyrinth.csproj", "{5037D388-1A48-4DC6-9166-EC68E763879E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graphs", "TarjansAlgorithm\Graphs.csproj", "{B28DC844-90D5-4B5D-944F-229B458DC314}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -273,6 +275,10 @@ Global
 		{5037D388-1A48-4DC6-9166-EC68E763879E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5037D388-1A48-4DC6-9166-EC68E763879E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5037D388-1A48-4DC6-9166-EC68E763879E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B28DC844-90D5-4B5D-944F-229B458DC314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B28DC844-90D5-4B5D-944F-229B458DC314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B28DC844-90D5-4B5D-944F-229B458DC314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B28DC844-90D5-4B5D-944F-229B458DC314}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
