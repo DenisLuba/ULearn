@@ -28,12 +28,12 @@ public class Node(int number)
 
     public int NodeNumber { get; init; } = number;
 
-    internal static Node[] Connect(Node from, Node to)
+    internal static Edge Connect(Node from, Node to)
     {
         var edge = new Edge(from, to);
         from.edges.Add(edge);
         to.edges.Add(edge);
-        return [from, to];
+        return edge;
     }
 
     internal static bool Disconnect(Edge edge)

@@ -1,11 +1,23 @@
 ﻿namespace Graphs;
 
-public class Edge(Node first, Node second)
+public class Edge
 {
-    public Node From { get; init; } = first;
-    public Node To { get; init; } = second;
+    public Node From { get; } 
+    public Node To { get; } 
 
-    public int Weight;
+    public int Weight { get; } 
+
+    public Edge(Node first, Node second, int weight = 0)
+    {
+        From = first;
+        To = second;
+        Weight = weight;
+
+        From.AddEdge(this);
+        To.AddEdge(this);
+    }
+
+    public Edge(int first, int second, int weight = 0) : this(new Node(first), new Node(second), weight) { }
 
     public bool IsIncident(Node node) => From == node || To == node;
 
@@ -13,4 +25,6 @@ public class Edge(Node first, Node second)
         => IsIncident(node) 
         ? (node == From ? To : From)
         : throw new ArgumentException();
+
+    public override string ToString() => $"From = {From.NodeNumber}, To = {To.NodeNumber}, Weight = {Weight}";
 }
