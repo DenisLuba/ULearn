@@ -30,4 +30,5 @@ public static class Util
 
     public static bool HasCycle(List<Edge> edges) => HasCycle(edges.SelectMany(edge => new[] { edge.From, edge.To }).Distinct().ToList());
 
+    public static void Print(this object? obj) => Console.WriteLine(obj);
 }
