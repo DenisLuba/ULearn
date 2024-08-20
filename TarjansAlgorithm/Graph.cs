@@ -51,15 +51,18 @@ public class Graph
     {
         var pattern = @"\D*(\d*)\D*((<-)|(->))\D*(\d*)\D*(?=(D*\d+))";
         var patternWithoutWeight = @"\D*(\d+)\D*((<-)|(->))\D*(\d+)[^,\d]*";
-        var patternWithWeight = @"\D*(\d+)\D*((<-)|(->))\D*(\d+)\D*,\D*(\d+)\D*";
+        var patternWithPositiveWeight = @"\D*(\d+)\D*((<-)|(->))\D*(\d+)\D*,\D*(\d+)\D*";
+        var patternWithNegativeWeight = @"\D*(\d+)\D*((<-)|(->))\D*(\d+)\D*,\D*(-\d+)\D*";
         var exceptionMessage = "Write an edge \"from->to\" or \"to<-from\", for example \"1->2\"";
         if (!Regex.IsMatch(fromTo, pattern)) throw new ArgumentException(exceptionMessage);
 
         // превращаем строку в строку вида, например, 11->22->33,
         // где 11 - номер узла, из которого выходит ребро, 22 - куда приходит, 33 - вес ребра;
         // возвращаем лист: 0 элемент будет 11, 1 - 22, 2 - 33
-        return Regex.Replace(Regex.IsMatch(fromTo, patternWithWeight)
-                ? Regex.Replace(fromTo, patternWithWeight, "$1$4$5->$6")
+        return Regex.Replace(Regex.IsMatch(fromTo, patternWithNegativeWeight)
+                ? Regex.Replace(fromTo, patternWithNegativeWeight, "$1$4$5->$6")
+                : Regex.IsMatch(fromTo, patternWithPositiveWeight)
+                ? Regex.Replace(fromTo, patternWithPositiveWeight, "$1$4$5->$6")
                 : Regex.Replace(fromTo, patternWithoutWeight, "$1$4$5->0"),
                 @"(\d+)<-(\d+)->\d+",
                 "$2->$1->$3")
@@ -79,5 +82,10 @@ public class Graph
         if (!nodes.Contains(node1)) nodes.Add(node1);
         if (!nodes.Contains(node2)) nodes.Add(node2);
         return nodes;
+    }
+
+    public override string ToString()
+    {
+        return string.Join("\n", Edges.Select(e => $"{e.From.NodeNumber} -> {e.To.NodeNumber} = {e.Weight}"));
     }
 }
